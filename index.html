@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>PressArk — AI Copilot for WordPress Admin</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="css/styles.css" rel="stylesheet"/>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        "on-primary":"#ffffff","primary":"#0058be","primary-container":"#2170e4",
+        "on-surface":"#171c1f","on-surface-variant":"#424754",
+        "surface":"#f6fafe","surface-container-low":"#f0f4f8","surface-container":"#eaeef2",
+        "surface-container-high":"#e4e9ed","surface-container-highest":"#dfe3e7",
+        "surface-container-lowest":"#ffffff","outline-variant":"#c2c6d6","outline":"#727785",
+        "secondary":"#565e74","secondary-container":"#dae2fd",
+        "inverse-surface":"#2c3134","inverse-on-surface":"#edf1f5",
+        "on-primary-container":"#fefcff","error":"#ba1a1a"
+      },
+      fontFamily: { headline:["Inter"], body:["Inter"], mono:["JetBrains Mono","monospace"] },
+      borderRadius: { DEFAULT:"0.125rem", lg:"0.25rem", xl:"0.5rem", full:"0.75rem" },
+    },
+  },
+}
+</script>
+</head>
+<body class="bg-surface text-on-surface antialiased">
+<nav class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-xl border-b border-outline-variant/10 shadow-[0_1px_3px_rgba(0,0,0,0.04)]">
+  <div class="flex justify-between items-center max-w-7xl mx-auto px-6 h-16">
+    <div class="flex items-center gap-8">
+      <a href="index.html" class="flex items-center gap-2.5">
+        <img src="img/white_app_logo.png" alt="PressArk Logo" class="h-8 w-auto object-contain flex-shrink-0" />
+        <span class="text-lg font-extrabold text-on-surface tracking-tight">PressArk</span>
+      </a>
+      <div class="hidden md:flex gap-1">
+        <a class="px-3 py-1.5 text-sm font-medium text-on-surface-variant hover:text-on-surface transition-colors rounded-md hover:bg-surface-container-low" href="features.html">Features</a>
+        <a class="px-3 py-1.5 text-sm font-medium text-on-surface-variant hover:text-on-surface transition-colors rounded-md hover:bg-surface-container-low" href="use-cases.html">Use Cases</a>
+        <a class="px-3 py-1.5 text-sm font-medium text-on-surface-variant hover:text-on-surface transition-colors rounded-md hover:bg-surface-container-low" href="pricing.html">Pricing</a>
+        <a class="px-3 py-1.5 text-sm font-medium text-on-surface-variant hover:text-on-surface transition-colors rounded-md hover:bg-surface-container-low" href="docs.html">Docs</a>
+        <a class="px-3 py-1.5 text-sm font-medium text-on-surface-variant hover:text-on-surface transition-colors rounded-md hover:bg-surface-container-low" href="faq.html">FAQ</a>
+        <a class="px-3 py-1.5 text-sm font-medium text-on-surface-variant hover:text-on-surface transition-colors rounded-md hover:bg-surface-container-low" href="changelog.html">Changelog</a>
+      </div>
+    </div>
+    <div class="flex items-center gap-3">
+      <a href="#" class="hidden sm:flex items-center gap-1.5 px-3 py-1.5 text-sm font-medium text-on-surface-variant hover:text-on-surface transition-colors"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg> GitHub</a>
+      <a href="#" class="px-4 py-2 bg-gradient-to-b from-primary to-[#004da6] text-white text-sm font-bold rounded-lg shadow-sm shadow-primary/20 hover:shadow-md hover:shadow-primary/25 transition-all active:scale-[0.98]">Download Plugin</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="site-hero relative pt-28 pb-16 lg:pt-36 lg:pb-24 bg-gradient-to-b from-surface to-surface-container-low">
+  <div class="hero-backdrop" aria-hidden="true">
+    <div class="hero-orb hero-orb--left"></div>
+    <div class="hero-orb hero-orb--right"></div>
+  </div>
+
+  <div class="hero-stage max-w-7xl mx-auto px-6">
+    <div class="hero-grid grid lg:grid-cols-12 gap-12 lg:gap-8">
+      <div class="hero-copy lg:col-span-5">
+        <div class="hero-kicker flex flex-wrap gap-2 mb-5">
+          <span class="text-[10px] uppercase tracking-[0.08em] font-bold px-2.5 py-1 bg-primary/8 text-primary rounded">WordPress plugin</span>
+          <span class="text-[10px] uppercase tracking-[0.08em] font-bold px-2.5 py-1 bg-primary/8 text-primary rounded">116+ AI tools</span>
+          <span class="text-[10px] uppercase tracking-[0.08em] font-bold px-2.5 py-1 bg-primary/8 text-primary rounded">BYOK supported</span>
+        </div>
+        <h1 class="text-4xl sm:text-5xl lg:text-[3.4rem] font-extrabold text-on-surface tracking-[-0.035em] leading-[1.05] mb-5">Your AI copilot<br/>for <span class="text-primary">WordPress&nbsp;admin</span></h1>
+        <p class="text-base lg:text-lg text-on-surface-variant max-w-md mb-8 leading-relaxed">Manage content, SEO, security, WooCommerce, and site operations — all from plain English inside wp&#8209;admin.</p>
+        <div class="flex flex-wrap items-center gap-4 mb-8">
+          <a href="#" class="px-6 py-3 bg-gradient-to-b from-primary to-[#004da6] text-white font-bold rounded-lg shadow-xl shadow-primary/20 hover:shadow-2xl hover:shadow-primary/30 transition-all active:scale-[0.98] text-sm">Download Plugin</a>
+          <a href="#" class="px-6 py-3 bg-surface-container-highest/60 text-on-surface font-bold rounded-lg hover:bg-surface-container-highest transition-colors text-sm">View on GitHub</a>
+        </div>
+        <div class="hero-proof flex items-center gap-3 text-xs text-on-surface-variant">
+          <span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-sm text-green-600" style="font-variation-settings:'FILL' 1;">verified</span>GPL licensed</span>
+          <span class="w-px h-3 bg-outline-variant/40"></span>
+          <span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-sm text-green-600" style="font-variation-settings:'FILL' 1;">verified</span>WordPress 6.x</span>
+          <span class="w-px h-3 bg-outline-variant/40"></span>
+          <span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-sm text-green-600" style="font-variation-settings:'FILL' 1;">verified</span>PHP 8.0+</span>
+        </div>
+      </div>
+
+      <div class="hero-preview lg:col-span-7 relative">
+        <div class="hero-mockup bg-white rounded-xl shadow-2xl shadow-black/8 border border-outline-variant/15 overflow-hidden transform lg:translate-x-6 lg:scale-[1.02]" style="max-height:520px;">
+          <div class="wp-topbar flex items-center justify-between text-[11px]">
+            <div class="flex items-center gap-3"><span class="text-[#c3c4c7]">&#9679; My WordPress Site</span></div>
+            <span class="text-[#c3c4c7]">Howdy, Admin</span>
+          </div>
+          <div class="flex" style="height:460px;">
+            <div class="wp-sidebar w-[170px] shrink-0 overflow-hidden hidden sm:block py-2">
+              <div class="wp-sidebar-item opacity-60"><span class="material-symbols-outlined text-sm">dashboard</span><span class="text-[12px]">Dashboard</span></div>
+              <div class="wp-sidebar-item opacity-60"><span class="material-symbols-outlined text-sm">article</span><span class="text-[12px]">Posts</span></div>
+              <div class="wp-sidebar-item opacity-60"><span class="material-symbols-outlined text-sm">image</span><span class="text-[12px]">Media</span></div>
+              <div class="wp-sidebar-item opacity-60"><span class="material-symbols-outlined text-sm">description</span><span class="text-[12px]">Pages</span></div>
+              <div class="wp-sidebar-item opacity-60"><span class="material-symbols-outlined text-sm">shopping_bag</span><span class="text-[12px]">WooCommerce</span></div>
+              <div class="wp-sidebar-item opacity-60"><span class="material-symbols-outlined text-sm">extension</span><span class="text-[12px]">Plugins</span></div>
+              <div class="wp-sidebar-item active"><img src="img/white_app_logo.png" alt="PressArk Logo" class="h-5 w-auto object-contain" /><span class="text-[12px] font-semibold">PressArk</span></div>
+              <div class="wp-sidebar-item opacity-60"><span class="material-symbols-outlined text-sm">settings</span><span class="text-[12px]">Settings</span></div>
+            </div>
+            <div class="pressark-panel flex-1">
+              <div class="pressark-header">
+                <img src="img/white_app_logo.png" alt="PressArk Logo" class="h-6 w-auto object-contain flex-shrink-0" />
+                <div><div class="text-[13px] font-bold text-[#1e1e1e] leading-tight">PressArk Copilot</div><div class="text-[10px] text-[#787c82] leading-tight">Claude Sonnet 4 · 14,200 credits</div></div>
+                <div class="ml-auto flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-green-500"></span><span class="text-[10px] text-[#787c82]">Ready</span></div>
+              </div>
+              <div class="pressark-messages">
+                <div class="msg-user">Scan my SEO and tell me what to fix first</div>
+                <div class="msg-assistant">
+                  <img src="img/white_app_logo.png" alt="PressArk Logo" class="h-6 w-auto object-contain flex-shrink-0 mt-[2px]" />
+                  <div class="msg-assistant-body">
+                    <div class="tool-execution"><span class="material-symbols-outlined" style="color:#16a34a;">check_circle</span><span class="font-mono text-[11px]">seo_scan_site</span><span class="text-[11px] text-[#787c82] ml-auto">1.2s</span></div>
+                    <div class="tool-execution"><span class="material-symbols-outlined" style="color:#16a34a;">check_circle</span><span class="font-mono text-[11px]">get_posts_missing_meta</span><span class="text-[11px] text-[#787c82] ml-auto">0.8s</span></div>
+                    <p class="mt-2 mb-2 text-[13px]">Found <strong>3 priority issues</strong> on your site:</p>
+                    <div class="space-y-1.5 text-[12px] text-[#50575e]">
+                      <div class="flex items-start gap-2"><span class="text-red-500 mt-0.5 text-[11px] font-bold">HIGH</span><span>12 posts missing meta descriptions</span></div>
+                      <div class="flex items-start gap-2"><span class="text-amber-500 mt-0.5 text-[11px] font-bold">MED</span><span>8 images without alt text in Media Library</span></div>
+                      <div class="flex items-start gap-2"><span class="text-amber-500 mt-0.5 text-[11px] font-bold">MED</span><span>Broken link on "About Us" page → /old-team</span></div>
+                    </div>
+                    <p class="mt-3 text-[12px] text-[#50575e]">I can auto-generate meta descriptions for all 12 posts. Approve?</p>
+                    <div class="approval-bar"><button class="btn-approve">Approve all</button><button class="btn-reject">Review individually</button></div>
+                  </div>
+                </div>
+              </div>
+              <div class="pressark-input"><input type="text" placeholder="Ask PressArk anything..." disabled /><button><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2L11 13"/><path d="M22 2l-7 20-4-9-9-4z"/></svg></button></div>
+            </div>
+          </div>
+        </div>
+        <div class="hero-aura absolute -z-10 top-8 left-8 right-0 bottom-0 bg-primary/5 blur-3xl rounded-3xl"></div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- CAPABILITY STRIP -->
+<section class="bg-surface-container-low py-8 border-y border-outline-variant/8">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="flex flex-wrap justify-center md:justify-between items-center gap-6 text-on-surface-variant">
+      <div class="flex items-center gap-2"><span class="material-symbols-outlined text-base opacity-50">edit_note</span><span class="font-semibold text-xs tracking-tight">Content editing</span></div>
+      <div class="flex items-center gap-2"><span class="material-symbols-outlined text-base opacity-50">troubleshoot</span><span class="font-semibold text-xs tracking-tight">SEO scans</span></div>
+      <div class="flex items-center gap-2"><span class="material-symbols-outlined text-base opacity-50">security</span><span class="font-semibold text-xs tracking-tight">Security audits</span></div>
+      <div class="flex items-center gap-2"><span class="material-symbols-outlined text-base opacity-50">shopping_cart</span><span class="font-semibold text-xs tracking-tight">WooCommerce ops</span></div>
+      <div class="flex items-center gap-2"><span class="material-symbols-outlined text-base opacity-50">layers</span><span class="font-semibold text-xs tracking-tight">Elementor-aware</span></div>
+      <div class="flex items-center gap-2"><span class="material-symbols-outlined text-base opacity-50">key</span><span class="font-semibold text-xs tracking-tight">BYOK mode</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="py-20 bg-surface">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="mb-14">
+      <span class="text-primary font-bold tracking-[0.1em] text-[10px] uppercase block mb-2">The Workflow</span>
+      <h2 class="text-3xl md:text-4xl font-extrabold tracking-[-0.03em] text-on-surface">Precision in three steps</h2>
+    </div>
+    <div class="grid md:grid-cols-3 gap-10">
+      <div class="relative group"><div class="text-6xl font-black text-outline-variant/15 absolute -top-6 -left-2 select-none group-hover:text-primary/10 transition-colors">01</div><div class="relative"><h3 class="text-lg font-bold mb-3">Install the plugin</h3><p class="text-on-surface-variant leading-relaxed text-[15px]">Download the ZIP and upload it to your WordPress dashboard. No external accounts, no SaaS dependency.</p></div></div>
+      <div class="relative group"><div class="text-6xl font-black text-outline-variant/15 absolute -top-6 -left-2 select-none group-hover:text-primary/10 transition-colors">02</div><div class="relative"><h3 class="text-lg font-bold mb-3">Ask in plain English</h3><p class="text-on-surface-variant leading-relaxed text-[15px]">Open the PressArk panel and type your request. It understands WordPress context — posts, meta, taxonomies, WooCommerce products.</p></div></div>
+      <div class="relative group"><div class="text-6xl font-black text-outline-variant/15 absolute -top-6 -left-2 select-none group-hover:text-primary/10 transition-colors">03</div><div class="relative"><h3 class="text-lg font-bold mb-3">Review and apply</h3><p class="text-on-surface-variant leading-relaxed text-[15px]">The AI drafts changes, shows which tools it used, explains its reasoning, and waits for your approval before committing.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES BENTO -->
+<section class="py-20 bg-surface-container-low">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="text-center mb-14"><h2 class="text-3xl md:text-4xl font-extrabold tracking-[-0.03em] mb-3">Architected for professionals</h2><p class="text-on-surface-variant max-w-2xl mx-auto text-base">Beyond simple chat — a deep integration into the core of WordPress operations.</p></div>
+    <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5">
+      <div class="md:col-span-2 md:row-span-2 bg-surface-container-lowest p-7 border border-outline-variant/10 rounded-lg shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between group">
+        <div><div class="w-10 h-10 bg-primary/8 text-primary rounded flex items-center justify-center mb-5 group-hover:bg-primary group-hover:text-white transition-colors"><span class="material-symbols-outlined text-xl" style="font-variation-settings:'FILL' 1;">smart_toy</span></div><h3 class="text-xl font-bold mb-3">Agentic multi-step workflows</h3><p class="text-on-surface-variant leading-relaxed text-[15px] mb-5">PressArk doesn't just answer — it acts. It researches your database, compares with SEO standards, drafts content, and schedules it. One command, multiple coordinated tool executions.</p></div>
+        <div class="bg-surface-container-low rounded border border-outline-variant/10 p-4"><div class="flex items-center gap-2 text-xs text-on-surface-variant mb-3"><span class="material-symbols-outlined text-sm text-primary" style="font-variation-settings:'FILL' 1;">auto_awesome</span><span class="font-mono font-medium">Tool chain execution</span></div><div class="space-y-1.5"><div class="flex items-center gap-2 text-[11px]"><span class="w-1.5 h-1.5 rounded-full bg-green-500"></span><span class="font-mono text-on-surface-variant">seo_scan_site</span><span class="text-outline ml-auto">→</span><span class="font-mono text-on-surface-variant">get_posts</span><span class="text-outline">→</span><span class="font-mono text-on-surface-variant">update_meta</span></div></div></div>
+      </div>
+      <div class="bg-surface-container-lowest p-6 border border-outline-variant/10 rounded-lg hover:shadow-md transition-shadow group"><span class="material-symbols-outlined text-primary mb-3 block text-xl">edit_document</span><h4 class="font-bold mb-1.5 text-[15px]">Content writing</h4><p class="text-sm text-on-surface-variant leading-relaxed">Rewrite or generate drafts directly into the Gutenberg editor without leaving the page.</p></div>
+      <div class="bg-surface-container-lowest p-6 border border-outline-variant/10 rounded-lg hover:shadow-md transition-shadow group"><span class="material-symbols-outlined text-primary mb-3 block text-xl">security</span><h4 class="font-bold mb-1.5 text-[15px]">Security audits</h4><p class="text-sm text-on-surface-variant leading-relaxed">On-demand scanning for vulnerabilities and common misconfigurations in WordPress core.</p></div>
+      <div class="bg-surface-container-lowest p-6 border border-outline-variant/10 rounded-lg hover:shadow-md transition-shadow group"><span class="material-symbols-outlined text-primary mb-3 block text-xl">monitoring</span><h4 class="font-bold mb-1.5 text-[15px]">SEO analysis</h4><p class="text-sm text-on-surface-variant leading-relaxed">Full site audits with one-click fixes for metadata, alt text, and broken links.</p></div>
+      <div class="bg-surface-container-lowest p-6 border border-outline-variant/10 rounded-lg hover:shadow-md transition-shadow group"><span class="material-symbols-outlined text-primary mb-3 block text-xl">inventory_2</span><h4 class="font-bold mb-1.5 text-[15px]">WooCommerce ops</h4><p class="text-sm text-on-surface-variant leading-relaxed">Manage inventory, draft product descriptions, and handle customer-facing content at scale.</p></div>
+      <div class="md:col-span-2 bg-gradient-to-br from-[#1d3557] to-primary text-white p-7 rounded-lg shadow-xl shadow-primary/15 flex flex-col justify-center"><h3 class="text-xl font-bold mb-2">BYOK: Bring Your Own Key</h3><p class="opacity-85 leading-relaxed text-[15px] mb-5">Full data privacy and cost control. Use your own API keys — zero overhead in BYOK mode.</p><div class="flex flex-wrap gap-2"><span class="px-2.5 py-1 bg-white/12 rounded text-[11px] font-bold">OpenAI</span><span class="px-2.5 py-1 bg-white/12 rounded text-[11px] font-bold">Anthropic</span><span class="px-2.5 py-1 bg-white/12 rounded text-[11px] font-bold">DeepSeek</span><span class="px-2.5 py-1 bg-white/12 rounded text-[11px] font-bold">Gemini</span><span class="px-2.5 py-1 bg-white/12 rounded text-[11px] font-bold">OpenRouter</span></div></div>
+      <div class="bg-surface-container-lowest p-6 border border-outline-variant/10 rounded-lg hover:shadow-md transition-shadow group"><span class="material-symbols-outlined text-primary mb-3 block text-xl">layers</span><h4 class="font-bold mb-1.5 text-[15px]">Elementor-aware</h4><p class="text-sm text-on-surface-variant leading-relaxed">Understands Flexbox Containers, page builder structures, and CSS regeneration.</p></div>
+      <div class="bg-surface-container-lowest p-6 border border-outline-variant/10 rounded-lg hover:shadow-md transition-shadow group"><span class="material-symbols-outlined text-primary mb-3 block text-xl">group_work</span><h4 class="font-bold mb-1.5 text-[15px]">Multi-site &amp; agency</h4><p class="text-sm text-on-surface-variant leading-relaxed">License across multiple sites with per-site activation and shared credit pools.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROMPTS -->
+<section class="py-20 bg-surface overflow-hidden">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="grid lg:grid-cols-12 gap-10 items-center">
+      <div class="lg:col-span-5"><span class="text-primary font-bold tracking-[0.1em] text-[10px] uppercase block mb-2">Natural Language</span><h2 class="text-3xl font-extrabold tracking-[-0.03em] mb-4">Talk to your site like a colleague</h2><p class="text-on-surface-variant text-[15px] leading-relaxed">PressArk understands WordPress data structures. It knows what Post Meta is, how WooCommerce handles taxes, and where your Elementor CSS is stored.</p></div>
+      <div class="lg:col-span-7 flex flex-col gap-3">
+        <div class="bg-surface-container-low border-l-[3px] border-primary p-5 rounded-r-lg hover:translate-x-1 transition-transform"><p class="font-mono text-[11px] text-primary/70 mb-1">prompt</p><p class="font-semibold text-[15px]">"Rewrite my homepage hero to sound more premium"</p></div>
+        <div class="bg-surface-container-low border-l-[3px] border-primary p-5 rounded-r-lg ml-3 hover:translate-x-1 transition-transform"><p class="font-mono text-[11px] text-primary/70 mb-1">prompt</p><p class="font-semibold text-[15px]">"Scan my SEO and tell me what to fix first"</p></div>
+        <div class="bg-surface-container-low border-l-[3px] border-primary p-5 rounded-r-lg ml-6 hover:translate-x-1 transition-transform"><p class="font-mono text-[11px] text-primary/70 mb-1">prompt</p><p class="font-semibold text-[15px]">"Find low-stock products and draft better descriptions"</p></div>
+        <div class="bg-surface-container-low border-l-[3px] border-primary p-5 rounded-r-lg ml-9 hover:translate-x-1 transition-transform"><p class="font-mono text-[11px] text-primary/70 mb-1">prompt</p><p class="font-semibold text-[15px]">"Run a security review and explain the risks"</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMPARISON -->
+<section class="py-20 bg-surface-container-low">
+  <div class="max-w-4xl mx-auto px-6">
+    <div class="text-center mb-12"><h2 class="text-3xl font-extrabold tracking-[-0.03em] mb-3">Why PressArk?</h2><p class="text-on-surface-variant text-[15px]">A native solution built specifically for the WordPress ecosystem.</p></div>
+    <div class="bg-surface-container-lowest rounded-lg overflow-hidden border border-outline-variant/12">
+      <table class="w-full border-collapse">
+        <thead><tr class="bg-surface-container"><th class="p-5 text-left font-bold text-[10px] uppercase tracking-[0.1em] text-on-surface-variant">Capability</th><th class="p-5 text-center font-bold text-[10px] uppercase tracking-[0.1em] text-primary">PressArk</th><th class="p-5 text-center font-bold text-[10px] uppercase tracking-[0.1em] text-on-surface-variant">Generic AI</th></tr></thead>
+        <tbody class="divide-y divide-outline-variant/8">
+          <tr><td class="p-5 font-medium text-sm">Native wp-admin interface</td><td class="p-5 text-center text-primary"><span class="material-symbols-outlined text-xl" style="font-variation-settings:'FILL' 1;">check_circle</span></td><td class="p-5 text-center text-outline-variant"><span class="material-symbols-outlined text-xl">cancel</span></td></tr>
+          <tr><td class="p-5 font-medium text-sm">Reads your site data before writing</td><td class="p-5 text-center text-primary"><span class="material-symbols-outlined text-xl" style="font-variation-settings:'FILL' 1;">check_circle</span></td><td class="p-5 text-center text-outline-variant"><span class="material-symbols-outlined text-xl">cancel</span></td></tr>
+          <tr><td class="p-5 font-medium text-sm">Multi-step tool execution</td><td class="p-5 text-center text-primary"><span class="material-symbols-outlined text-xl" style="font-variation-settings:'FILL' 1;">check_circle</span></td><td class="p-5 text-center text-outline-variant"><span class="material-symbols-outlined text-xl">cancel</span></td></tr>
+          <tr><td class="p-5 font-medium text-sm">Human-in-the-loop approvals</td><td class="p-5 text-center text-primary"><span class="material-symbols-outlined text-xl" style="font-variation-settings:'FILL' 1;">check_circle</span></td><td class="p-5 text-center text-outline-variant"><span class="material-symbols-outlined text-xl">remove_circle_outline</span></td></tr>
+          <tr><td class="p-5 font-medium text-sm">WooCommerce + Elementor</td><td class="p-5 text-center text-primary"><span class="material-symbols-outlined text-xl" style="font-variation-settings:'FILL' 1;">check_circle</span></td><td class="p-5 text-center text-outline-variant"><span class="material-symbols-outlined text-xl">cancel</span></td></tr>
+          <tr><td class="p-5 font-medium text-sm">BYOK with zero overhead</td><td class="p-5 text-center text-primary"><span class="material-symbols-outlined text-xl" style="font-variation-settings:'FILL' 1;">check_circle</span></td><td class="p-5 text-center text-outline-variant"><span class="material-symbols-outlined text-xl">cancel</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="py-20 relative overflow-hidden bg-surface">
+  <div class="max-w-7xl mx-auto px-6 text-center relative z-10">
+    <h2 class="text-4xl md:text-5xl font-extrabold tracking-[-0.035em] mb-4 max-w-2xl mx-auto leading-tight">Install PressArk and run WordPress faster</h2>
+    <p class="text-on-surface-variant text-base mb-8 max-w-lg mx-auto">Free tier available. No credit card required. Works with WordPress 6.x and PHP 8.0+.</p>
+    <div class="flex flex-wrap justify-center gap-4">
+      <a href="#" class="px-8 py-4 bg-gradient-to-b from-primary to-[#004da6] text-white text-base font-bold rounded-lg shadow-2xl shadow-primary/25 hover:scale-[1.02] transition-all active:scale-[0.98]">Download Plugin</a>
+      <a href="#" class="px-8 py-4 bg-surface-container-highest/60 text-on-surface text-base font-bold rounded-lg hover:bg-surface-container-highest transition-colors">View on GitHub</a>
+    </div>
+  </div>
+  <div class="absolute inset-0 -z-10"><div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/4 blur-[120px] rounded-full"></div></div>
+</section>
+
+<footer class="bg-surface-container-low border-t border-outline-variant/10 py-14">
+  <div class="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-10">
+    <div class="col-span-2">
+      <div class="flex items-center gap-2.5 mb-3"><img src="img/app-icon-dark-rounded-512.png" alt="PressArk Logo" class="h-7 w-auto object-contain flex-shrink-0" /><span class="text-base font-extrabold text-on-surface tracking-tight">PressArk</span></div>
+      <p class="text-sm leading-relaxed text-on-surface-variant max-w-xs mb-5">Your AI copilot for WordPress admin. Built for admins, agencies, and operators.</p>
+      <a href="#" class="inline-flex items-center gap-1.5 text-sm text-on-surface-variant hover:text-on-surface transition-colors"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg> GitHub</a>
+    </div>
+    <div>
+      <h5 class="font-bold text-on-surface text-sm mb-3">Product</h5>
+      <ul class="space-y-2.5 text-sm">
+        <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="features.html">Features</a></li>
+        <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="use-cases.html">Use Cases</a></li>
+        <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="pricing.html">Pricing</a></li>
+      </ul>
+    </div>
+    <div>
+      <h5 class="font-bold text-on-surface text-sm mb-3">Resources</h5>
+      <ul class="space-y-2.5 text-sm">
+        <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="docs.html">Docs</a></li>
+        <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="faq.html">FAQ</a></li>
+        <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="changelog.html">Changelog</a></li>
+      </ul>
+    </div>
+    <div>
+      <h5 class="font-bold text-on-surface text-sm mb-3">Legal</h5>
+      <ul class="space-y-2.5 text-sm">
+        <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Privacy</a></li>
+        <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Terms</a></li>
+        <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="max-w-7xl mx-auto px-6 mt-10 pt-6 border-t border-outline-variant/10">
+    <p class="text-xs text-outline">&copy; 2026 PressArk. All rights reserved.</p>
+  </div>
+</footer>
+<script src="js/shared.js"></script>
+</body></html>

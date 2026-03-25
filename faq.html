@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>FAQ — PressArk</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="css/styles.css" rel="stylesheet"/>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        "on-primary":"#ffffff","primary":"#0058be","primary-container":"#2170e4",
+        "on-surface":"#171c1f","on-surface-variant":"#424754",
+        "surface":"#f6fafe","surface-container-low":"#f0f4f8","surface-container":"#eaeef2",
+        "surface-container-high":"#e4e9ed","surface-container-highest":"#dfe3e7",
+        "surface-container-lowest":"#ffffff","outline-variant":"#c2c6d6","outline":"#727785",
+        "secondary":"#565e74","secondary-container":"#dae2fd",
+        "inverse-surface":"#2c3134","inverse-on-surface":"#edf1f5",
+        "on-primary-container":"#fefcff","error":"#ba1a1a"
+      },
+      fontFamily: { headline:["Inter"], body:["Inter"], mono:["JetBrains Mono","monospace"] },
+      borderRadius: { DEFAULT:"0.125rem", lg:"0.25rem", xl:"0.5rem", full:"0.75rem" },
+    },
+  },
+}
+</script>
+</head>
+<body class="bg-surface text-on-surface antialiased">
+<nav class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-xl border-b border-outline-variant/10 shadow-[0_1px_3px_rgba(0,0,0,0.04)]">
+  <div class="flex justify-between items-center max-w-7xl mx-auto px-6 h-16">
+    <div class="flex items-center gap-8">
+      <a href="index.html" class="flex items-center gap-2.5">
+        <img src="img/white_app_logo.png" alt="PressArk Logo" class="h-8 w-auto object-contain flex-shrink-0" />
+        <span class="text-lg font-extrabold text-on-surface tracking-tight">PressArk</span>
+      </a>
+      <div class="hidden md:flex gap-1">
+        <a class="px-3 py-1.5 text-sm font-medium text-on-surface-variant hover:text-on-surface transition-colors rounded-md hover:bg-surface-container-low" href="features.html">Features</a>
+        <a class="px-3 py-1.5 text-sm font-medium text-on-surface-variant hover:text-on-surface transition-colors rounded-md hover:bg-surface-container-low" href="use-cases.html">Use Cases</a>
+        <a class="px-3 py-1.5 text-sm font-medium text-on-surface-variant hover:text-on-surface transition-colors rounded-md hover:bg-surface-container-low" href="pricing.html">Pricing</a>
+        <a class="px-3 py-1.5 text-sm font-medium text-on-surface-variant hover:text-on-surface transition-colors rounded-md hover:bg-surface-container-low" href="docs.html">Docs</a>
+        <a class="px-3 py-1.5 text-sm font-medium text-primary bg-primary/5 rounded-md" href="faq.html">FAQ</a>
+        <a class="px-3 py-1.5 text-sm font-medium text-on-surface-variant hover:text-on-surface transition-colors rounded-md hover:bg-surface-container-low" href="changelog.html">Changelog</a>
+      </div>
+    </div>
+    <div class="flex items-center gap-3">
+      <a href="#" class="hidden sm:flex items-center gap-1.5 px-3 py-1.5 text-sm font-medium text-on-surface-variant hover:text-on-surface transition-colors"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg> GitHub</a>
+      <a href="#" class="px-4 py-2 bg-gradient-to-b from-primary to-[#004da6] text-white text-sm font-bold rounded-lg shadow-sm shadow-primary/20 hover:shadow-md hover:shadow-primary/25 transition-all active:scale-[0.98]">Download Plugin</a>
+    </div>
+  </div>
+</nav>
+<main class="pt-28 pb-24">
+  <header class="max-w-7xl mx-auto px-6 mb-12">
+    <div class="max-w-2xl">
+      <span class="text-primary font-bold tracking-[0.1em] text-[10px] uppercase mb-3 block">Knowledge Base</span>
+      <h1 class="text-4xl md:text-5xl font-extrabold tracking-[-0.035em] mb-5 leading-tight">Technical Support &amp; Documentation.</h1>
+      <p class="text-on-surface-variant text-lg leading-relaxed">Everything you need to know about the most advanced AI copilot for WordPress.</p>
+    </div>
+  </header>
+
+  <div class="max-w-4xl mx-auto px-6">
+    <section class="mb-10"><div class="flex items-center gap-3 mb-6"><div class="w-8 h-8 rounded bg-primary flex items-center justify-center text-white"><span class="material-symbols-outlined text-sm" style="font-variation-settings:'FILL' 1;">info</span></div><h2 class="text-xl font-bold tracking-tight">Product Basics</h2></div><div class="space-y-2"><div class="bg-surface-container-lowest p-5 rounded-lg border border-outline-variant/10"><div class="flex justify-between items-center cursor-pointer" data-faq-toggle><h3 class="font-bold text-[15px]">What is PressArk?</h3><span class="material-symbols-outlined faq-icon text-outline">expand_more</span></div><p class="mt-3 text-on-surface-variant text-sm leading-relaxed hidden">PressArk is a specialized AI copilot integrated directly into your WordPress admin. It automates repetitive management tasks, content optimization, and technical troubleshooting using advanced Large Language Models with 116+ specialized tools.</p></div><div class="bg-surface-container-lowest p-5 rounded-lg border border-outline-variant/10"><div class="flex justify-between items-center cursor-pointer" data-faq-toggle><h3 class="font-bold text-[15px]">Is this a WordPress plugin or web app?</h3><span class="material-symbols-outlined faq-icon text-outline">expand_more</span></div><p class="mt-3 text-on-surface-variant text-sm leading-relaxed hidden">It is a native WordPress plugin. The primary interface lives inside your WordPress sidebar for seamless operational access. We provide a license management dashboard at pressark.ai, but the tool itself runs in wp-admin.</p></div><div class="bg-surface-container-lowest p-5 rounded-lg border border-outline-variant/10"><div class="flex justify-between items-center cursor-pointer" data-faq-toggle><h3 class="font-bold text-[15px]">How do I install the plugin?</h3><span class="material-symbols-outlined faq-icon text-outline">expand_more</span></div><p class="mt-3 text-on-surface-variant text-sm leading-relaxed hidden">Download the ZIP file from your account dashboard or GitHub. In your WordPress admin, navigate to <code class="bg-surface-container-low px-1.5 py-0.5 rounded font-mono text-sm">Plugins &gt; Add New &gt; Upload Plugin</code>. After activation, enter your license key or configure BYOK to connect to the AI engine.</p></div></div></section><section class="mb-10"><div class="flex items-center gap-3 mb-6"><div class="w-8 h-8 rounded bg-primary flex items-center justify-center text-white"><span class="material-symbols-outlined text-sm" style="font-variation-settings:'FILL' 1;">payments</span></div><h2 class="text-xl font-bold tracking-tight">Credits &amp; Billing</h2></div><div class="space-y-2"><div class="bg-surface-container-lowest p-5 rounded-lg border border-outline-variant/10"><div class="flex justify-between items-center cursor-pointer" data-faq-toggle><h3 class="font-bold text-[15px]">What are credits?</h3><span class="material-symbols-outlined faq-icon text-outline">expand_more</span></div><p class="mt-3 text-on-surface-variant text-sm leading-relaxed hidden">Credits represent the compute power used for AI requests. Different tasks consume varying amounts based on token length and model complexity. A simple meta description generation uses fewer credits than a full site SEO audit.</p></div><div class="bg-surface-container-lowest p-5 rounded-lg border border-outline-variant/10"><div class="flex justify-between items-center cursor-pointer" data-faq-toggle><h3 class="font-bold text-[15px]">Do credits roll over?</h3><span class="material-symbols-outlined faq-icon text-outline">expand_more</span></div><p class="mt-3 text-on-surface-variant text-sm leading-relaxed hidden">Monthly plan credits do not roll over. However, manually purchased Extra Credit packs never expire and are only used after your monthly allocation is exhausted.</p></div><div class="bg-surface-container-lowest p-5 rounded-lg border border-outline-variant/10"><div class="flex justify-between items-center cursor-pointer" data-faq-toggle><h3 class="font-bold text-[15px]">Can I upgrade or downgrade anytime?</h3><span class="material-symbols-outlined faq-icon text-outline">expand_more</span></div><p class="mt-3 text-on-surface-variant text-sm leading-relaxed hidden">Yes. Plans are billed monthly and can be adjusted at any point. Downgrades take effect at the end of your billing cycle, while upgrades are prorated immediately.</p></div></div></section><section class="mb-10"><div class="flex items-center gap-3 mb-6"><div class="w-8 h-8 rounded bg-primary flex items-center justify-center text-white"><span class="material-symbols-outlined text-sm" style="font-variation-settings:'FILL' 1;">key</span></div><h2 class="text-xl font-bold tracking-tight">Technical (BYOK)</h2></div><div class="space-y-2"><div class="bg-surface-container-lowest p-5 rounded-lg border border-outline-variant/10"><div class="flex justify-between items-center cursor-pointer" data-faq-toggle><h3 class="font-bold text-[15px]">What is BYOK?</h3><span class="material-symbols-outlined faq-icon text-outline">expand_more</span></div><p class="mt-3 text-on-surface-variant text-sm leading-relaxed hidden">Bring Your Own Key lets you plug in your own API keys from OpenAI, Anthropic, DeepSeek, Google Gemini, or OpenRouter. We charge zero overhead when using your own keys — credits are only consumed for our internal agentic workflow orchestration.</p></div><div class="bg-surface-container-lowest p-5 rounded-lg border border-outline-variant/10"><div class="flex justify-between items-center cursor-pointer" data-faq-toggle><h3 class="font-bold text-[15px]">Which AI models are supported?</h3><span class="material-symbols-outlined faq-icon text-outline">expand_more</span></div><p class="mt-3 text-on-surface-variant text-sm leading-relaxed hidden">PressArk supports GPT-4o, Claude Sonnet 4, DeepSeek V3, Gemini 2.5 Flash, and any model available via OpenRouter. Model selection is per-request configurable.</p></div><div class="bg-surface-container-lowest p-5 rounded-lg border border-outline-variant/10"><div class="flex justify-between items-center cursor-pointer" data-faq-toggle><h3 class="font-bold text-[15px]">Is my data sent to third parties?</h3><span class="material-symbols-outlined faq-icon text-outline">expand_more</span></div><p class="mt-3 text-on-surface-variant text-sm leading-relaxed hidden">When using BYOK, your prompts go directly to your chosen provider. When using managed credits, requests route through our token bank infrastructure. We never store conversation content beyond the active session.</p></div></div></section>
+  </div>
+
+  <section class="max-w-4xl mx-auto px-6 mt-16"><div class="bg-surface-container-low rounded-xl p-10 text-center"><h3 class="text-xl font-extrabold mb-3">Still have questions?</h3><p class="text-on-surface-variant mb-5">Our engineering team is happy to help with technical inquiries.</p><a href="contact.html" class="px-6 py-3 bg-primary text-white font-bold rounded-lg hover:brightness-110 transition-all inline-block">Contact Support</a></div></section>
+</main>
+<footer class="bg-surface-container-low border-t border-outline-variant/10 py-14">
+  <div class="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-10">
+    <div class="col-span-2">
+      <div class="flex items-center gap-2.5 mb-3"><img src="img/app-icon-dark-rounded-512.png" alt="PressArk Logo" class="h-7 w-auto object-contain flex-shrink-0"><span class="text-base font-extrabold text-on-surface tracking-tight">PressArk</span></div>
+      <p class="text-sm leading-relaxed text-on-surface-variant max-w-xs mb-5">Your AI copilot for WordPress admin. Built for admins, agencies, and operators.</p>
+      <a href="#" class="inline-flex items-center gap-1.5 text-sm text-on-surface-variant hover:text-on-surface transition-colors"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg> GitHub</a>
+    </div>
+    <div>
+      <h5 class="font-bold text-on-surface text-sm mb-3">Product</h5>
+      <ul class="space-y-2.5 text-sm">
+        <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="features.html">Features</a></li>
+        <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="use-cases.html">Use Cases</a></li>
+        <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="pricing.html">Pricing</a></li>
+      </ul>
+    </div>
+    <div>
+      <h5 class="font-bold text-on-surface text-sm mb-3">Resources</h5>
+      <ul class="space-y-2.5 text-sm">
+        <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="docs.html">Docs</a></li>
+        <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="faq.html">FAQ</a></li>
+        <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="changelog.html">Changelog</a></li>
+      </ul>
+    </div>
+    <div>
+      <h5 class="font-bold text-on-surface text-sm mb-3">Legal</h5>
+      <ul class="space-y-2.5 text-sm">
+        <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Privacy</a></li>
+        <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Terms</a></li>
+        <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="max-w-7xl mx-auto px-6 mt-10 pt-6 border-t border-outline-variant/10">
+    <p class="text-xs text-outline">&copy; 2026 PressArk. All rights reserved.</p>
+  </div>
+</footer>
+<script src="js/shared.js"></script>
+</body></html>
