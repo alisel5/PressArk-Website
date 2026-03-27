@@ -120,6 +120,10 @@ document.addEventListener('DOMContentLoaded', function () {
       const willExpand = answer.classList.contains('hidden');
       answer.classList.toggle('hidden', !willExpand);
       el.setAttribute('aria-expanded', String(willExpand));
+      const parentItem = el.closest('.faq-item') || el.parentElement;
+      if (parentItem) {
+        parentItem.classList.toggle('is-open', willExpand);
+      }
       if (icon) {
         icon.textContent = willExpand ? 'expand_less' : 'expand_more';
       }
@@ -132,5 +136,24 @@ document.addEventListener('DOMContentLoaded', function () {
         toggleAnswer();
       }
     });
+  });
+
+  const observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+      }
+    });
+  }, { threshold: 0.18 });
+
+  const handleNavScroll = function () {
+    if (!nav) return;
+    nav.classList.toggle('is-scrolled', window.scrollY > 6);
+  };
+  handleNavScroll();
+  window.addEventListener('scroll', handleNavScroll, { passive: true });
+  
+  document.querySelectorAll('.animate-in').forEach(function (el) {
+    observer.observe(el);
   });
 });
