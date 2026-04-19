@@ -266,7 +266,7 @@ const InterfaceSection = ({ isTablet, isMobile }) => (
         <div style={{ position: "absolute", inset: isMobile ? "6% -2% -2% 4%" : "8% -4% -4% 6%", background: "rgba(15,39,72,.06)", filter: "blur(58px)", borderRadius: 40, zIndex: 0 }} />
         <div style={{ position: "relative", background: "#fff", border: "1px solid rgba(112,131,166,.16)", borderRadius: 16, boxShadow: "0 42px 100px -58px rgba(11,29,56,.55)", overflow: "hidden" }}>
           <div style={{ padding: isMobile ? "12px 14px" : "14px 18px", borderBottom: "1px solid rgba(112,131,166,.14)", display: "flex", alignItems: "center", gap: 10 }}>
-            <img src="../../assets/white_app_logo.png" alt="" style={{ height: 22 }} />
+                        <img src="assets/white_app_logo.png" alt="" style={{ height: 22 }} />
             <div style={{ minWidth: 0 }}>
               <div style={{ fontSize: 13, fontWeight: 700 }}>PressArk in wp-admin</div>
               <div style={{ fontSize: 11, color: "#727785" }}>Claude Sonnet 4 / 14,200 credits</div>
@@ -278,7 +278,7 @@ const InterfaceSection = ({ isTablet, isMobile }) => (
               Trim all product descriptions to under 160 characters.
             </div>
             <div style={{ display: "flex", gap: 10, alignItems: "flex-start" }}>
-              <img src="../../assets/white_app_logo.png" alt="" style={{ height: 22, marginTop: 2 }} />
+                      <img src="assets/white_app_logo.png" alt="" style={{ height: 22, marginTop: 2 }} />
               <div style={{ flex: 1, display: "flex", flexDirection: "column", gap: 8, minWidth: 0 }}>
                 <ToolRow name="woo_list_products" result="247 found" />
                 <ToolRow name="trim_descriptions" result="47 exceed limit" />

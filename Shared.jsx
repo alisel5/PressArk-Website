@@ -99,7 +99,7 @@ const Nav = ({ current = "" }) => {
       >
         <div style={{ display: "flex", alignItems: isCompact ? "flex-start" : "center", gap: isCompact ? 12 : 24, width: isCompact ? "100%" : "auto", flexWrap: isCompact ? "wrap" : "nowrap" }}>
           <a href="index.html" style={{ display: "flex", alignItems: "center", gap: 10, textDecoration: "none", color: "inherit" }}>
-            <img src="../../assets/white_app_logo.png" alt="PressArk" style={{ height: 28, width: "auto" }}/>
+              <img src="assets/white_app_logo.png" alt="PressArk" style={{ height: 28, width: "auto" }}/>
             <span style={{ fontWeight: 800, fontSize: 17, letterSpacing: "-.02em" }}>PressArk</span>
           </a>
           <div style={{ display: "flex", gap: 2, rowGap: isTight ? 6 : 2, overflowX: isCompact && !isTight ? "auto" : "visible", flexWrap: isTight ? "wrap" : "nowrap", width: isCompact ? "100%" : "auto", paddingBottom: isCompact && !isTight ? 2 : 0 }}>
@@ -147,7 +147,7 @@ const Footer = () => {
         <div style={{ display: "grid", gridTemplateColumns: columns, gap: isMobile ? 24 : 40, marginBottom: 40 }}>
           <div>
             <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 14 }}>
-              <img src="../../assets/app-icon-rounded-1024.png" alt="PressArk" style={{ height: 32 }}/>
+              <img src="assets/app-icon-rounded-1024.png" alt="PressArk" style={{ height: 32 }}/>
               <span style={{ fontWeight: 800, fontSize: 18, color: "#fff" }}>PressArk</span>
             </div>
             <p style={{ fontSize: 13, color: "#8fa5c6", maxWidth: 300, lineHeight: 1.6, margin: 0 }}>The AI copilot for WordPress websites and WooCommerce stores. Built for operators who work inside wp-admin.</p>

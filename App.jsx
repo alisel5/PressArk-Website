@@ -62,13 +62,13 @@ const HeroMock = ({ isTablet, isMobile }) => (
             </div>
           ))}
           <div style={{ display: "flex", alignItems: "center", gap: 8, padding: isMobile ? "10px 0" : "8px 14px", color: "#fff", background: "#171c1f", fontSize: 12, fontWeight: 600, justifyContent: isMobile ? "center" : "flex-start" }}>
-            <img src="../../assets/white_app_logo.png" alt="" style={{ height: 16 }}/>
+                    <img src="assets/white_app_logo.png" alt="" style={{ height: 16 }}/>
             {!isMobile && "PressArk"}
           </div>
         </div>
         <div style={{ flex: 1, display: "flex", flexDirection: "column", background: "#fff", minWidth: 0 }}>
           <div style={{ padding: isMobile ? "12px" : "12px 16px", borderBottom: "1px solid #e2e4e7", display: "flex", alignItems: "center", gap: 10 }}>
-            <img src="../../assets/white_app_logo.png" alt="" style={{ height: 22 }}/>
+                    <img src="assets/white_app_logo.png" alt="" style={{ height: 22 }}/>
             <div style={{ minWidth: 0 }}>
               <div style={{ fontSize: 13, fontWeight: 700 }}>PressArk Copilot</div>
               <div style={{ fontSize: 10, color: "#787c82" }}>Claude Sonnet 4 · 14,200 credits</div>
@@ -81,7 +81,7 @@ const HeroMock = ({ isTablet, isMobile }) => (
           <div style={{ flex: 1, padding: isMobile ? 12 : 16, overflow: "hidden", display: "flex", flexDirection: "column", gap: 12 }}>
             <div className="hero-mock-bubble" style={{ alignSelf: "flex-end", background: "#0058be", color: "#fff", padding: "8px 12px", borderRadius: "14px 14px 2px 14px", fontSize: 12, maxWidth: isMobile ? "88%" : "70%" }}>Scan my SEO and tell me what to fix first</div>
             <div style={{ display: "flex", gap: 8 }}>
-              <img src="../../assets/white_app_logo.png" alt="" style={{ height: 20, marginTop: 2 }}/>
+                    <img src="assets/white_app_logo.png" alt="" style={{ height: 20, marginTop: 2 }}/>
               <div style={{ flex: 1, display: "flex", flexDirection: "column", gap: 6, minWidth: 0 }}>
                 <ToolRow name="seo_scan_site" done pct={100}/>
                 <ToolRow name="get_posts_missing_meta" done pct={100} result="12 found"/>
@@ -438,7 +438,7 @@ const ReviewSection = ({ isTablet, isMobile }) => (
         <div style={{ position: "absolute", inset: isMobile ? "-3%" : "-6% -4%", background: "#fafbfc", borderRadius: 24, zIndex: 0 }}/>
         <div style={{ position: "relative", background: "#fff", border: "1px solid rgba(112,131,166,.16)", borderRadius: 16, padding: isMobile ? 16 : 20, boxShadow: "0 30px 70px -48px rgba(15,39,72,.34)", zIndex: 1 }}>
           <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 16, paddingBottom: 12, borderBottom: "1px solid rgba(112,131,166,.12)" }}>
-            <img src="../../assets/white_app_logo.png" alt="" style={{ height: 20 }}/>
+                      <img src="assets/white_app_logo.png" alt="" style={{ height: 20 }}/>
             <span style={{ fontSize: 13, fontWeight: 700 }}>Pending review</span>
             <span style={{ marginLeft: "auto", fontSize: 11, color: "#727785", fontFamily: "'JetBrains Mono',monospace" }}>3 actions</span>
           </div>
