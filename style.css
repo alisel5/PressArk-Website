@@ -8,6 +8,12 @@
   --white:#ffffff;
   --navy-900:#0a1526; --navy-800:#111e37; --navy-700:#1d3557;
   --success:#16a34a; --warning:#f59e0b; --danger:#ef4444; --error:#ba1a1a;
+  /* Alias layer for pages written against the design-system token names. */
+  --color-primary:var(--primary); --color-primary-container:var(--primary-container);
+  --color-ink:var(--ink); --color-ink-muted:var(--ink-muted); --color-outline:var(--outline);
+  --color-surface-container-lowest:var(--white); --color-surface-container-low:var(--surface-low); --color-surface-container-high:var(--surface-high);
+  --color-navy-700:var(--navy-700); --color-navy-900:var(--navy-900);
+  --color-success:var(--success); --color-warning:var(--warning);
   --border-soft:rgba(112,131,166,.18); --border-hair:rgba(120,142,175,.16);
   --shadow-card:0 22px 52px -42px rgba(15,39,72,.36);
   --shadow-soft:0 24px 54px -40px rgba(15,39,72,.34);
