@@ -1,112 +1,50 @@
-<!DOCTYPE html>
-<html class="scroll-smooth" lang="en">
+<!doctype html>
+<html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Changelog — PressArk</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
-<link href="css/styles.css" rel="stylesheet"/>
-<script>
-tailwind.config = {
-  theme: {
-    extend: {
-      colors: {
-        "on-primary":"#ffffff","primary":"#0058be","primary-container":"#2170e4",
-        "on-surface":"#171c1f","on-surface-variant":"#424754",
-        "surface":"#f6fafe","surface-container-low":"#f0f4f8","surface-container":"#eaeef2",
-        "surface-container-high":"#e4e9ed","surface-container-highest":"#dfe3e7",
-        "surface-container-lowest":"#ffffff","outline-variant":"#c2c6d6","outline":"#727785",
-        "secondary":"#565e74","secondary-container":"#dae2fd",
-        "inverse-surface":"#2c3134","inverse-on-surface":"#edf1f5",
-        "on-primary-container":"#fefcff","error":"#ba1a1a"
-      },
-      fontFamily: { headline:["Inter"], body:["Inter"], mono:["JetBrains Mono","monospace"] },
-      borderRadius: { DEFAULT:"0.125rem", lg:"0.25rem", xl:"0.5rem", full:"0.75rem" },
-    },
-  },
-}
-</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Changelog | PressArk Releases & Product Updates</title>
+<!-- SEO -->
+<meta name="description" content="Read product updates for PressArk, the AI copilot for WordPress admin and WooCommerce operations.">
+<meta name="robots" content="index,follow">
+<meta name="theme-color" content="#0058be">
+<link rel="canonical" href="https://pressark.com/changelog">
+<meta property="og:site_name" content="PressArk">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Changelog | PressArk Releases &amp; Product Updates">
+<meta property="og:description" content="Read product updates for PressArk, the AI copilot for WordPress admin and WooCommerce operations.">
+<meta property="og:url" content="https://pressark.com/changelog">
+<meta property="og:image" content="https://pressark.com/assets/app-icon-rounded-1024.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Changelog | PressArk Releases &amp; Product Updates">
+<meta name="twitter:description" content="Read product updates for PressArk, the AI copilot for WordPress admin and WooCommerce operations.">
+<meta name="twitter:image" content="https://pressark.com/assets/app-icon-rounded-1024.png">
+<!-- /SEO -->
+<link rel="icon" href="../../assets/app-icon-rounded-1024.png">
+<link rel="stylesheet" href="../../colors_and_type.css">
+<link rel="stylesheet" href="style.css">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
 </head>
-<body id="top" class="bg-surface text-on-surface antialiased">
-<nav class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-xl border-b border-outline-variant/10 shadow-[0_1px_3px_rgba(0,0,0,0.04)]">
-  <div class="flex justify-between items-center max-w-7xl mx-auto px-6 h-16">
-    <div class="flex items-center gap-8">
-      <a href="index.html" class="flex items-center gap-2.5">
-        <img src="img/white_app_logo.png" alt="PressArk Logo" class="h-8 w-auto object-contain flex-shrink-0" />
-        <span class="text-lg font-extrabold text-on-surface tracking-tight">PressArk</span>
-      </a>
-      <div class="hidden md:flex gap-1">
-        <a class="px-3 py-1.5 text-sm font-medium text-on-surface-variant hover:text-on-surface transition-colors rounded-md hover:bg-surface-container-low" href="features.html">Features</a>
-        <a class="px-3 py-1.5 text-sm font-medium text-on-surface-variant hover:text-on-surface transition-colors rounded-md hover:bg-surface-container-low" href="use-cases.html">Use Cases</a>
-        <a class="px-3 py-1.5 text-sm font-medium text-on-surface-variant hover:text-on-surface transition-colors rounded-md hover:bg-surface-container-low" href="pricing.html">Pricing</a>
-        <a class="px-3 py-1.5 text-sm font-medium text-on-surface-variant hover:text-on-surface transition-colors rounded-md hover:bg-surface-container-low" href="docs.html">Docs</a>
-        <a class="px-3 py-1.5 text-sm font-medium text-on-surface-variant hover:text-on-surface transition-colors rounded-md hover:bg-surface-container-low" href="faq.html">FAQ</a>
-        <a class="px-3 py-1.5 text-sm font-medium text-primary bg-primary/5 rounded-md" href="changelog.html">Changelog</a>
+<body>
+  <div class="grid-bg"></div>
+  <div id="root" style="position:relative;z-index:1;"></div>
+  <!-- SEO NOSCRIPT -->
+  <noscript>
+<main class="seo-fallback">
+      <p class="seo-fallback__eyebrow">Changelog</p>
+      <h1>PressArk release notes and product updates</h1>
+      <p>Track release history, product changes, and improvement notes for the PressArk WordPress copilot and WooCommerce workflows.</p>
+      <div class="seo-fallback__links">
+        <a href="docs.html">Open docs</a>
+        <a href="features.html">See features</a>
+        <a href="pricing.html">Review plans</a>
       </div>
-    </div>
-    <div class="flex items-center gap-3">
-      <a href="https://github.com/alisel5/pressark" target="_blank" rel="noopener noreferrer" class="hidden sm:flex items-center gap-1.5 px-3 py-1.5 text-sm font-medium text-on-surface-variant hover:text-on-surface transition-colors"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg> GitHub</a>
-      <a href="pressark.zip" target="_blank" rel="noopener noreferrer" class="px-4 py-2 bg-gradient-to-b from-primary to-[#004da6] text-white text-sm font-bold rounded-lg shadow-sm shadow-primary/20 hover:shadow-md hover:shadow-primary/25 transition-all active:scale-[0.98]">Download Plugin</a>
-    </div>
-  </div>
-</nav>
-<main class="pt-28 pb-24">
-  <section class="max-w-4xl mx-auto px-6 mb-16">
-    <span class="text-primary font-bold tracking-[0.1em] text-[10px] uppercase mb-3 block">Release History</span>
-    <h1 class="text-4xl md:text-5xl font-extrabold tracking-[-0.035em] mb-5 leading-tight">Changelog</h1>
-    <p class="text-lg text-on-surface-variant leading-relaxed">Every update, improvement, and fix — documented with technical precision.</p>
-  </section>
-
-  <section class="max-w-4xl mx-auto px-6">
-    <div class="timeline-list space-y-8">
-      <div class="border-l-2 border-primary pl-8 relative"><div class="absolute -left-2 top-0 w-4 h-4 bg-primary rounded-full border-4 border-surface"></div><div class="flex items-center gap-3 mb-3"><span class="font-mono font-bold text-primary">v4.1.2</span><span class="text-xs text-on-surface-variant">March 2026</span><span class="px-2 py-0.5 bg-primary/10 text-primary text-[10px] font-bold uppercase rounded">Latest</span></div><h3 class="text-lg font-bold mb-2">Freemius SDK Integration &amp; Token Bank</h3><p class="text-on-surface-variant text-sm leading-relaxed mb-3">Replaced custom license server with Freemius SDK for billing, licensing, tax/VAT, and in-dashboard upgrades. Token bank deployed on Railway for AI API arbitrage metering. Dynamic max_tokens bug fix for OpenRouter 402 errors.</p><div class="flex flex-wrap gap-2"><span class="px-2 py-0.5 bg-surface-container-low text-[11px] font-medium rounded">Freemius SDK</span><span class="px-2 py-0.5 bg-surface-container-low text-[11px] font-medium rounded">Token Bank</span><span class="px-2 py-0.5 bg-surface-container-low text-[11px] font-medium rounded">Bug Fix</span></div></div>
-
-      <div class="border-l-2 border-outline-variant/30 pl-8 relative"><div class="absolute -left-2 top-0 w-4 h-4 bg-surface-container-high rounded-full border-4 border-surface"></div><div class="flex items-center gap-3 mb-3"><span class="font-mono font-bold">v4.1.1</span><span class="text-xs text-on-surface-variant">February 2026</span></div><h3 class="text-lg font-bold mb-2">HPOS Compatibility &amp; Elementor Fixes</h3><p class="text-on-surface-variant text-sm leading-relaxed mb-3">Added High-Performance Order Storage (HPOS) compatibility for WooCommerce. Fixed Elementor CSS regeneration order bug, Flexbox Container support, and __globals__ clearing. Security hardening with wp_safe_remote_* SSRF fix and OpenSSL→Sodium encryption migration.</p><div class="flex flex-wrap gap-2"><span class="px-2 py-0.5 bg-surface-container-low text-[11px] font-medium rounded">HPOS</span><span class="px-2 py-0.5 bg-surface-container-low text-[11px] font-medium rounded">Elementor</span><span class="px-2 py-0.5 bg-surface-container-low text-[11px] font-medium rounded">Security</span></div></div>
-
-      <div class="border-l-2 border-outline-variant/30 pl-8 relative"><div class="absolute -left-2 top-0 w-4 h-4 bg-surface-container-high rounded-full border-4 border-surface"></div><div class="flex items-center gap-3 mb-3"><span class="font-mono font-bold">v4.1.0</span><span class="text-xs text-on-surface-variant">January 2026</span></div><h3 class="text-lg font-bold mb-2">116+ Tools &amp; Modular Architecture</h3><p class="text-on-surface-variant text-sm leading-relaxed mb-3">Major architecture overhaul to fully modular system with 79 PHP files and 116+ tools. Introduced intent-based tool filtering via DeepSeek V3 classifier and discover_tools meta-tool. Prompt caching for 90% cost reduction on repeated tool definitions.</p><div class="flex flex-wrap gap-2"><span class="px-2 py-0.5 bg-surface-container-low text-[11px] font-medium rounded">Architecture</span><span class="px-2 py-0.5 bg-surface-container-low text-[11px] font-medium rounded">116+ Tools</span><span class="px-2 py-0.5 bg-surface-container-low text-[11px] font-medium rounded">Cost Optimization</span></div></div>
-
-      <div class="border-l-2 border-outline-variant/30 pl-8 relative"><div class="absolute -left-2 top-0 w-4 h-4 bg-surface-container-high rounded-full border-4 border-surface"></div><div class="flex items-center gap-3 mb-3"><span class="font-mono font-bold">v4.0.0</span><span class="text-xs text-on-surface-variant">December 2025</span></div><h3 class="text-lg font-bold mb-2">Initial Public Release</h3><p class="text-on-surface-variant text-sm leading-relaxed">First public release of PressArk (formerly PressWiz). Core chat interface, BYOK support, WordPress + WooCommerce + Elementor tool sets, and credit-based billing system.</p></div>
-    </div>
-  </section>
-</main>
-<footer class="bg-surface-container-low border-t border-outline-variant/10 py-14">
-  <div class="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-10">
-    <div class="col-span-2">
-      <div class="flex items-center gap-2.5 mb-3"><img src="img/app-icon-dark-rounded-512.png" alt="PressArk Logo" class="h-7 w-auto object-contain flex-shrink-0"><span class="text-base font-extrabold text-on-surface tracking-tight">PressArk</span></div>
-      <p class="text-sm leading-relaxed text-on-surface-variant max-w-xs mb-5">Your AI copilot for WordPress admin. Built for admins, agencies, and operators.</p>
-      <a href="https://github.com/alisel5/pressark" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-sm text-on-surface-variant hover:text-on-surface transition-colors"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg> GitHub</a>
-    </div>
-    <div>
-      <h5 class="font-bold text-on-surface text-sm mb-3">Product</h5>
-      <ul class="space-y-2.5 text-sm">
-        <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="features.html">Features</a></li>
-        <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="use-cases.html">Use Cases</a></li>
-        <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="pricing.html">Pricing</a></li>
-      </ul>
-    </div>
-    <div>
-      <h5 class="font-bold text-on-surface text-sm mb-3">Resources</h5>
-      <ul class="space-y-2.5 text-sm">
-        <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="docs.html">Docs</a></li>
-        <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="faq.html">FAQ</a></li>
-        <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="changelog.html">Changelog</a></li>
-      </ul>
-    </div>
-    <div>
-      <h5 class="font-bold text-on-surface text-sm mb-3">Legal</h5>
-      <ul class="space-y-2.5 text-sm">
-        <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="privacy.html">Privacy</a></li>
-        <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="terms.html">Terms</a></li>
-        <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="contact.html">Contact</a></li>
-      </ul>
-    </div>
-  </div>
-  <div class="max-w-7xl mx-auto px-6 mt-10 pt-6 border-t border-outline-variant/10">
-    <p class="text-xs text-outline">&copy; 2026 PressArk. All rights reserved.</p>
-  </div>
-</footer>
-<script src="js/shared.js"></script>
-</body></html>
+    </main>
+  </noscript>
+  <!-- /SEO NOSCRIPT -->
+  <script type="text/babel" src="Shared.jsx"></script>
+  <script type="text/babel" src="Changelog.jsx"></script>
+</body>
+</html>

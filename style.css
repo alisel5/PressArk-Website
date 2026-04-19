@@ -1,0 +1,104 @@
+/* ui_kits/website/style.css — design tokens + layout primitives */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,100..700,0..1,0&display=swap');
+
+:root{
+  --primary:#0058be; --primary-dark:#004da6; --primary-container:#2170e4;
+  --ink:#171c1f; --ink-muted:#424754; --outline:#727785; --outline-var:#c2c6d6;
+  --surface:#f6fafe; --surface-low:#f0f4f8; --surface-med:#eaeef2; --surface-high:#e4e9ed;
+  --white:#ffffff;
+  --navy-900:#0a1526; --navy-800:#111e37; --navy-700:#1d3557;
+  --success:#16a34a; --warning:#f59e0b; --danger:#ef4444; --error:#ba1a1a;
+  --border-soft:rgba(112,131,166,.18); --border-hair:rgba(120,142,175,.16);
+  --shadow-card:0 22px 52px -42px rgba(15,39,72,.36);
+  --shadow-soft:0 24px 54px -40px rgba(15,39,72,.34);
+  --shadow-editorial:0 30px 80px -46px rgba(15,39,72,.42);
+  --shadow-primary-md:0 24px 56px -30px rgba(0,88,190,.45);
+  --shadow-primary-lg:0 40px 95px -56px rgba(0,88,190,.45);
+  --shadow-deep:0 36px 90px -52px rgba(10,18,35,.78);
+  --glass:rgba(255,255,255,.76); --glass-strong:rgba(255,255,255,.86);
+  --ease:cubic-bezier(.4,0,.2,1);
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  font-family:'Inter',system-ui,sans-serif; color:var(--ink);
+  background:#ffffff;
+  min-height:100vh;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+}
+.grid-bg{display:none;}
+.container{max-width:1240px; margin:0 auto; padding:0 32px}
+.kicker{display:inline-block; font-size:10px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:var(--primary)}
+.mono{font-family:'JetBrains Mono',ui-monospace,monospace}
+.ms{font-family:'Material Symbols Outlined'; font-weight:normal; font-style:normal; line-height:1; letter-spacing:normal; text-transform:none; display:inline-block; white-space:nowrap; direction:ltr; -webkit-font-feature-settings:'liga'; font-feature-settings:'liga'; -webkit-font-smoothing:antialiased}
+.ms.fill{font-variation-settings:'FILL' 1}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 22px;border-radius:10px;font-weight:700;font-size:14px;border:none;cursor:pointer;transition:all .2s var(--ease);font-family:inherit;white-space:nowrap}
+.btn-primary{background:linear-gradient(180deg,var(--primary),var(--primary-dark));color:#fff;box-shadow:var(--shadow-primary-md)}
+.btn-primary:hover{box-shadow:var(--shadow-primary-lg); transform:translateY(-1px)}
+.btn-primary:active{transform:scale(.98)}
+.btn-ghost{background:rgba(223,227,231,.6); color:var(--ink)}
+.btn-ghost:hover{background:rgba(223,227,231,.9)}
+.btn-outline{background:#fff; color:var(--primary); border:1.5px solid var(--primary)}
+.btn-sm{padding:8px 16px;font-size:13px;border-radius:8px}
+
+/* surfaces */
+.card{background:var(--white); border:1px solid var(--border-soft); border-radius:16px; box-shadow:var(--shadow-card)}
+.card-pad{padding:28px}
+.card-glass{background:var(--glass-strong); backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px); border:1px solid var(--border-soft); border-radius:20px; box-shadow:var(--shadow-soft)}
+
+/* chips */
+.chip{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:4px 10px;border-radius:4px;background:rgba(0,88,190,.08);color:var(--primary);border:1px solid rgba(0,88,190,.12)}
+.chip-pill{background:var(--surface-low); color:var(--ink-muted); border-radius:999px; text-transform:none; letter-spacing:0; font-weight:500; font-size:12px; border:none; padding:4px 12px}
+
+/* focus */
+button:focus-visible, a:focus-visible{outline:none; box-shadow:0 0 0 3px #fff,0 0 0 6px rgba(33,112,228,.24); border-radius:10px}
+
+/* spinner */
+@keyframes spin{to{transform:rotate(360deg)}}
+.spinner-s{width:14px;height:14px;border-radius:50%;border:2px solid rgba(0,88,190,.2);border-top-color:#0058be;animation:spin .8s linear infinite;flex-shrink:0}
+
+/* crawl-friendly fallback content for no-JS clients */
+.seo-fallback{
+  max-width:960px;
+  margin:0 auto;
+  padding:48px 24px;
+  color:var(--ink);
+}
+.seo-fallback__eyebrow{
+  margin:0 0 12px;
+  font-size:12px;
+  font-weight:700;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  color:var(--primary);
+}
+.seo-fallback h1{
+  margin:0 0 16px;
+  font-size:42px;
+  line-height:1.08;
+  letter-spacing:-.03em;
+}
+.seo-fallback p{
+  margin:0 0 16px;
+  font-size:16px;
+  line-height:1.65;
+  color:var(--ink-muted);
+  max-width:760px;
+}
+.seo-fallback__links{
+  display:flex;
+  gap:16px;
+  flex-wrap:wrap;
+  margin-top:24px;
+}
+.seo-fallback__links a{
+  color:var(--primary);
+  font-weight:600;
+  text-decoration:none;
+}
+.seo-fallback__links a:hover{
+  text-decoration:underline;
+}
